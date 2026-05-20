@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dawn — Read every morning. Prove it.</title>
+<meta name="description" content="The morning reading habit, kept honest by a photo. Take a live shot of your open book before your set time. Streak grows. Miss it, it resets.">
+<link rel="canonical" href="https://jacomakes.com/dawn">
+<meta property="og:title" content="Dawn — Read every morning. Prove it.">
+<meta property="og:description" content="The morning reading habit, kept honest by a photo.">
+<meta property="og:url" content="https://jacomakes.com/dawn">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f4f1ea">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --panel: #ffffff;
+    --text: #1f1b14;
+    --muted: #898070;
+    --accent: #a89875;
+    --border: #d8d1c2;
+    --sunrise-1: #f9d48a;
+    --sunrise-2: #e8a87c;
+    --sunrise-3: #c98a6b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 96px; }
+  .crumb { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  .crumb a:hover { color: var(--text); }
+  .hero { padding: 48px 0 24px; }
+  .badge { display: inline-block; background: linear-gradient(135deg, var(--sunrise-1), var(--sunrise-2)); color: #1f1b14; padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 20px; }
+  h1 { font-family: ui-serif, "New York", Georgia, serif; font-size: 48px; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 16px; }
+  .lede { font-size: 18px; color: var(--muted); margin: 0 0 36px; max-width: 520px; }
+  .how { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin: 24px 0; }
+  .how h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 0 0 18px; }
+  .how ol { margin: 0; padding-left: 22px; }
+  .how li { margin-bottom: 12px; }
+  .how li:last-child { margin-bottom: 0; }
+  .signup { background: linear-gradient(135deg, #fff5e1, #ffe5c8); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin: 32px 0 24px; }
+  .signup h2 { margin: 0 0 8px; font-size: 20px; letter-spacing: -0.005em; }
+  .signup p { margin: 0 0 18px; color: var(--muted); font-size: 14.5px; }
+  form { display: flex; gap: 8px; flex-wrap: wrap; }
+  input[type=email] { flex: 1; min-width: 200px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 15px; }
+  input[type=email]:focus { outline: none; border-color: var(--accent); }
+  button { padding: 12px 20px; border-radius: 10px; border: 0; background: var(--text); color: var(--bg); font-size: 15px; font-weight: 600; cursor: pointer; }
+  button:hover { background: #2d271d; }
+  .status { font-size: 13px; color: var(--muted); margin-top: 12px; min-height: 18px; }
+  footer { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; display: flex; gap: 18px; flex-wrap: wrap; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/">← Jaco</a></div>
+
+  <div class="hero">
+    <span class="badge">Coming soon on iOS</span>
+    <h1>Read every morning. Prove it.</h1>
+    <p class="lede">Dawn is a daily morning reading habit, kept honest by a live photo. Take a shot of your open book before your set time. Your streak grows. Miss it, it resets.</p>
+  </div>
+
+  <div class="how">
+    <h2>How it works</h2>
+    <ol>
+      <li>Pick a wake hour the night before.</li>
+      <li>In the morning, open Dawn and capture a live photo of your open book.</li>
+      <li>Your streak grows. Miss the wake hour, the day is lost.</li>
+    </ol>
+  </div>
+
+  <div class="signup">
+    <h2>Get notified when it launches.</h2>
+    <p>One email when Dawn ships on the App Store. No other emails, ever.</p>
+    <form id="notify" onsubmit="return submitForm(event)">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <button type="submit">Notify me</button>
+    </form>
+    <div class="status" id="status"></div>
+  </div>
+
+  <footer>
+    <a href="/dawn/privacy">Privacy</a>
+    <a href="/dawn/terms">Terms</a>
+    <a href="mailto:support@jacomakes.com">support@jacomakes.com</a>
+  </footer>
+</div>
+
+<script>
+  function submitForm(e) {
+    e.preventDefault();
+    const status = document.getElementById('status');
+    const email = e.target.email.value.trim();
+    if (!email) return false;
+    status.textContent = "Thanks — we'll email you when Dawn ships.";
+    e.target.reset();
+    // TODO: wire to a form endpoint (Buttondown / ConvertKit / Supabase). For now this is a no-op confirmation.
+    return false;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dawn — Privacy Policy</title>
+<meta name="description" content="Privacy policy for Dawn by Jaco.">
+<link rel="canonical" href="https://jacomakes.com/dawn/privacy">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --panel: #ffffff;
+    --text: #1f1b14;
+    --muted: #898070;
+    --accent: #a89875;
+    --border: #d8d1c2;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 96px; }
+  .crumb { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  .crumb a:hover { color: var(--text); }
+  h1 { font-family: ui-serif, "New York", Georgia, serif; font-size: 36px; letter-spacing: -0.02em; margin: 0 0 6px; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 36px; }
+  h2 { font-size: 17px; margin: 32px 0 10px; letter-spacing: -0.005em; }
+  p, li { color: var(--text); }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  footer { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); text-decoration: none; margin-right: 18px; }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/dawn">← Dawn</a></div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: May 20, 2026</p>
+
+  <p>This policy explains what information Dawn (the iOS app) collects, why, and how you can control it. Dawn is made by Jaco, an independent software studio. If you have questions, write to <a href="mailto:support@jacomakes.com">support@jacomakes.com</a>.</p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li><strong>Account info.</strong> When you sign in with Apple, we receive a stable user identifier and (optionally) the email you choose to share. We do not receive your real name unless you provide it.</li>
+    <li><strong>Photos you capture.</strong> Each daily reading photo is stored privately under your account. Photos are visible only to you.</li>
+    <li><strong>Usage data.</strong> Entry dates, streak length, and the wake hour you set. This is what makes the habit-tracking work.</li>
+    <li><strong>Subscription status.</strong> Whether you have an active Pro entitlement, processed by RevenueCat on behalf of the App Store.</li>
+  </ul>
+
+  <h2>What we do not collect</h2>
+  <ul>
+    <li>We do not run analytics, tracking, or advertising SDKs.</li>
+    <li>We do not access your photo library beyond saving the cards you explicitly choose to save.</li>
+    <li>We do not sell, share, or rent any of your data.</li>
+  </ul>
+
+  <h2>Where your data lives</h2>
+  <ul>
+    <li><strong>Supabase</strong> — our managed Postgres + object storage provider. Your photos and entries sit in a row-level-security-protected schema that only your authenticated session can read.</li>
+    <li><strong>RevenueCat</strong> — handles subscription receipts on top of Apple's StoreKit. Receives your anonymous app user ID and the App Store transaction.</li>
+    <li><strong>Apple</strong> — App Store, Sign in with Apple, and Push Notifications. Subject to Apple's own privacy terms.</li>
+  </ul>
+
+  <h2>How long we keep it</h2>
+  <p>As long as your account exists. You can delete everything at any time from <em>Settings → Delete account</em> inside the app. Deletion is immediate and permanent — photos, entries, and the account itself are removed from our database within minutes.</p>
+
+  <h2>Your rights</h2>
+  <p>You can request a copy of your data, ask us to correct it, or have it deleted at any time. Email <a href="mailto:support@jacomakes.com">support@jacomakes.com</a>.</p>
+
+  <h2>Children</h2>
+  <p>Dawn is rated 4+ on the App Store but is not directed at children under 13 and we do not knowingly collect data from them.</p>
+
+  <h2>Changes</h2>
+  <p>If we update this policy materially, we will update the date at the top and post a notice in the app.</p>
+
+  <footer>
+    <a href="/">Jaco</a>
+    <a href="/dawn">Dawn</a>
+    <a href="/dawn/terms">Terms</a>
+  </footer>
+</div>
+</body>
+</html>
