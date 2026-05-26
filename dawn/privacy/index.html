@@ -56,12 +56,14 @@
     <li>We do not sell, share, or rent any of your data.</li>
   </ul>
 
-  <h2>Where your data lives</h2>
+  <h2>Third-party processors</h2>
+  <p>Dawn uses two third-party services to deliver core functionality. Each acts as a data processor on our behalf and is bound by their own privacy policy.</p>
   <ul>
-    <li><strong>Supabase:</strong> our managed Postgres + object storage provider. Your photos and entries sit in a row-level-security-protected schema that only your authenticated session can read.</li>
-    <li><strong>RevenueCat:</strong> handles subscription receipts on top of Apple's StoreKit. Receives your anonymous app user ID and the App Store transaction.</li>
-    <li><strong>Apple:</strong> App Store, Sign in with Apple, and Push Notifications. Subject to Apple's own privacy terms.</li>
+    <li><strong>Supabase</strong> (Supabase, Inc.) — provides authenticated storage for your reading photos, optional reflection notes, and account session. Data is scoped to your account via row-level security; we do not retain or inspect your photos server-side beyond what your account permissions allow. See <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
+    <li><strong>RevenueCat</strong> (RevenueCat, Inc.) — handles subscription receipts and entitlement state for the in-app subscription. It receives a pseudonymous user identifier and the App Store receipt; it does not receive your reading photos, notes, or sign-in identifiers beyond the App Store transaction. See <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</li>
+    <li><strong>Apple</strong> — App Store, Sign in with Apple, and Push Notifications. Subject to Apple's own privacy terms.</li>
   </ul>
+  <p>We do not use any analytics, advertising, or tracking SDKs. We do not sell or rent your data.</p>
 
   <h2>How long we keep it</h2>
   <p>As long as your account exists. You can delete everything at any time from <em>Settings → Delete account</em> inside the app. Deletion is immediate and permanent: photos, entries, and the account itself are removed from our database within minutes.</p>
